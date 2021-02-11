@@ -12,13 +12,14 @@ const ContactForm = () => {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>FORM
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
+            id = 'firstName'
             name="firstName"
-            placeholder="Edd"
-            ref={register({ required: true, maxLength: 3 })}
+            placeholder="First Name"
+            ref={register({ required: true, maxLength: 6 })}
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
@@ -30,7 +31,7 @@ const ContactForm = () => {
           <input
             id="lastName"
             name="lastName"
-            placeholder="Burke"
+            placeholder="Last Name"
             ref={register({ required: true })}
           />
           {errors.lastName && (
@@ -43,8 +44,8 @@ const ContactForm = () => {
             Email*
           </label>
           <input name="email" 
-            id="lastName"
-            placeholder="bluebill1049@hotmail.com"
+            id="email"
+            placeholder="E-mail"
             ref={register({ required: true })} 
           />
           {errors.email && (
@@ -64,7 +65,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" />
+        <input id = 'submit' type="submit" />
       </form>
     </div>
   );
