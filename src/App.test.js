@@ -24,10 +24,10 @@ test('input field works', ()=> {
   expect(email).toBeTruthy()
   expect(message).toBeTruthy()
 
-  fireEvent.change(firstName, {target: { value:'Nam'}})
-  fireEvent.change(lastName, {target: { value:'Woo'}})
+  fireEvent.change(firstName, {target: { value:'Nate'}})
+  fireEvent.change(lastName, {target: { value:'Grandelis'}})
   fireEvent.change(email, {target: { value:'email@email.com'}})
-  fireEvent.change(message, {target: { value:'ramdom things here'}})
+  fireEvent.change(message, {target: { value:'random things here'}})
 
   const form = screen.getByText(/FORM/i)
   expect(form).toBeTruthy()
